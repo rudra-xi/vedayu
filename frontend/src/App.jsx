@@ -9,7 +9,7 @@ function App() {
 		<>
 			<div className="bg-secondary h-screen sm:h-full">
 				<Navbar />
-				<div className="sm:px-30 px-10 pt-14">
+				<div className="sm:px-30 px-10 pt-24">
 					<Routes>
 						<Route path="/" element={<Landing />} />
 						<Route path="/login" element={<Login />} />
