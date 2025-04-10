@@ -29,7 +29,7 @@ function Login() {
 	};
 
 	return (
-		<section className="px-4 py-8">
+		<section className="pb-12">
 			<Title Title={isLogin ? "Lōgin" : "Siḡn Up"} />
 
 			<div className="flex flex-col md:flex-row items-center justify-center relative rounded-3xl drop-shadow-2xl">
