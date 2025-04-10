@@ -1,22 +1,27 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-import { Dashboard, Heart, Insights, Landing, Profile, Sign } from "./Pages";
+import { Dashboard, Heart, Insights, Landing, Profile, Login } from "./Pages";
 import { Footer, Navbar } from "./Components";
 
 function App() {
 	return (
 		<>
-			<div>
+			<div className="bg-secondary">
 				<Navbar />
-				<Routes>
-					<Route path="/" element={<Landing />} />
-					<Route path="/sign" element={<Sign />} />
-					<Route path="/dashboard" element={<Dashboard />} />
-					<Route path="/insight" element={<Insights />} />
-					<Route path="/profile" element={<Profile />} />
-					<Route path="/heart" element={<Heart />} />
-				</Routes>
+				<div className="sm:px-30 px-10 pt-24">
+					<Routes>
+						<Route path="/" element={<Landing />} />
+						<Route path="/login" element={<Login />} />
+						<Route
+							path="/dashboard"
+							element={<Dashboard />}
+						/>
+						<Route path="/insight" element={<Insights />} />
+						<Route path="/profile" element={<Profile />} />
+						<Route path="/heart" element={<Heart />} />
+					</Routes>
+				</div>
 				<Footer />
 			</div>
 		</>
