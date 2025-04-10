@@ -9,11 +9,12 @@ function Navbar() {
 	return (
 		<nav>
 			<div className="flex justify-between items-center sm:px-10 px-4 py-2 bg-secondary text-primary border-b-2 fixed w-full z-50">
+
 				<img
 					src={logoLight}
 					alt="logo"
 					className="w-10 cursor-pointer"
-					onClick={() => navigate("/")}
+					onClick={() => isLoggedIn ? navigate("/dashboard") : navigate("/")}
 				/>
 
 				{isLoggedIn ? (
@@ -41,12 +42,12 @@ function Navbar() {
 					</div>
 				) : (
 					<div>
-						<ul className="flex space-x-4">
+						<ul className="font-inf text-4xl font-bold text-primary text-center">
 							<li
 								className="cursor-pointer"
-								onClick={() => navigate("/heart")}
+								onClick={() => navigate("/")}
 							>
-								Heart Us
+								Vedayū
 							</li>
 						</ul>
 					</div>
