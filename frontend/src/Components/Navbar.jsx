@@ -1,9 +1,66 @@
-import React from 'react'
+import React, { useContext } from "react";
+import { logoLight } from "../Assets";
+import Button from "./Button";
+import { AppContext } from "../Context/AppContext";
 
 function Navbar() {
-  return (
-    <div>Navbar</div>
-  )
+	const { isLoggedIn, login, logout, navigate } = useContext(AppContext);
+
+	return (
+		<nav>
+			<div className="flex justify-between items-center sm:px-10 px-4 py-2 bg-secondary text-primary border-b-2 fixed w-full z-50">
+				<img
+					src={logoLight}
+					alt="logo"
+					className="w-10 cursor-pointer"
+					onClick={() => navigate("/")}
+				/>
+
+				{isLoggedIn ? (
+					<div>
+						<ul className="flex space-x-4">
+							<li
+								className="cursor-pointer"
+								onClick={() => navigate("/dashboard")}
+							>
+								Dashboard
+							</li>
+							<li
+								className="cursor-pointer"
+								onClick={() => navigate("/insight")}
+							>
+								Insights
+							</li>
+							<li
+								className="cursor-pointer"
+								onClick={() => navigate("/profile")}
+							>
+								Profile
+							</li>
+						</ul>
+					</div>
+				) : (
+					<div>
+						<ul className="flex space-x-4">
+							<li
+								className="cursor-pointer"
+								onClick={() => navigate("/heart")}
+							>
+								Heart Us
+							</li>
+						</ul>
+					</div>
+				)}
+
+				<Button
+					buttonText={isLoggedIn ? "Logout" : "Login"}
+					onClick={
+						isLoggedIn ? logout : () => navigate("/login")
+					}
+				/>
+			</div>
+		</nav>
+	);
 }
 
-export default Navbar
+export default Navbar;
