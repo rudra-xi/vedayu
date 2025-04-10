@@ -5,15 +5,34 @@ export const AppContext = createContext();
 
 function AppContextProvider({ children }) {
 	const navigate = useNavigate();
-	const [isLoggedIn, setIsLoggedIn] = useState(false); // Better naming than "login"
+	const [isLoggedIn, setIsLoggedIn] = useState(false);
+	const [user, setUser] = useState(null);
+
+	const login = (userData) => {
+		setIsLoggedIn(true);
+		setUser(userData);
+		navigate("/dashboard"); // or wherever you want to redirect after login
+	};
+
+	const logout = () => {
+		setIsLoggedIn(false);
+		setUser(null);
+		navigate("/");
+	};
+
+	const signup = (userData) => {
+		// Typically you would send this to your backend
+		setUser(userData);
+		setIsLoggedIn(true);
+		navigate("/dashboard");
+	};
 
 	const value = {
 		isLoggedIn,
-		login: () => setIsLoggedIn(true),
-		logout: () => {
-			setIsLoggedIn(false);
-			navigate("/");
-		},
+		user,
+		login,
+		logout,
+		signup,
 		navigate,
 	};
 
