@@ -7,9 +7,9 @@ import { Footer, Navbar } from "./Components";
 function App() {
 	return (
 		<>
-			<div className="bg-secondary">
+			<div className="bg-secondary h-screen sm:h-full">
 				<Navbar />
-				<div className="sm:px-30 px-10 pt-24">
+				<div className="sm:px-30 px-10 pt-14">
 					<Routes>
 						<Route path="/" element={<Landing />} />
 						<Route path="/login" element={<Login />} />

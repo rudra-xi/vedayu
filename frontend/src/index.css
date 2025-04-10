@@ -1,17 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300..700;1,300..700&family=Ysabeau+SC:wght@1..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300..700;1,300..700&family=Ysabeau+SC:wght@1..1000&display=swap");
 
 @import "tailwindcss";
 
-
 @theme {
-
-     --font-inf: "Cormorant Infant",
-     --font-ysa: "Ysabeau SC",
+	--font-inf: "Cormorant Infant";
+	--font-ysa: "Ysabeau SC";
 
 	--color-primary: #3b1e54;
 	--color-secondary: #d4bee4;
-	--color-tertiary: #eeeee;
+	--color-tertiary: #eeeeee;
 	--color-accent: #f3c623;
+	--ease-in-btn: cubic-bezier(0.14, 0.38, 0.13, -0.12);
 }
 
 :root {
@@ -21,6 +20,7 @@
 	--accent: #f3c623;
 }
 
-html,body{
-     font-family: "Ysabeau SC", sans-serif;
+html,
+body {
+	font-family: "Ysabeau SC", sans-serif;
 }
