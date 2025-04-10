@@ -1,9 +1,10 @@
 import React from "react";
 
-function Title({ Title }) {
+function Title({ Title, SubTitle }) {
 	return (
-		<div className="font-inf text-6xl font-bold text-primary text-center pb-20">
-			{Title}.
+		<div className="text-primary text-center pb-20">
+			<h1 className="font-inf text-6xl font-bold">{Title}.</h1>
+			<p className="text-xl font-medium pt-3">{SubTitle}</p>
 		</div>
 	);
 }
