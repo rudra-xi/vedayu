@@ -11,8 +11,7 @@
 	--color-tertiary: #eeeeee;
 	--color-accent: #f3c623;
 
-	--ease-in-btn: cubic-bezier(0.14, 0.38, 0.13, -0.12);
-	--ease-in-card: cubic-bezier(0.08, 0.32, 0.08, -0.73);
+	--ease-custom: cubic-bezier(0.75, 0.25, 0.25, 0.75);
 }
 
 :root {
