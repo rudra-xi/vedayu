@@ -58,7 +58,7 @@ function Login() {
 							placeholder="Name"
 							value={formData.name}
 							onChange={handleChange}
-							className="w-full h-10 border-b-2 border-primary px-4 outline-none focus:border-accent transition-all duration-500 ease-in-out"
+							className="w-full h-10 border-b-2 border-primary px-4 outline-none focus:border-accent transition-all duration-500 ease-custom"
 							required
 						/>
 					)}
@@ -69,7 +69,7 @@ function Login() {
 						placeholder="Email"
 						value={formData.email}
 						onChange={handleChange}
-						className="w-full h-10 border-b-2 border-primary px-4 outline-none focus:border-accent transition-all duration-500 ease-in-out"
+						className="w-full h-10 border-b-2 border-primary px-4 outline-none focus:border-accent transition-all duration-500 ease-custom"
 						required
 					/>
 
@@ -79,7 +79,7 @@ function Login() {
 						placeholder="Password"
 						value={formData.password}
 						onChange={handleChange}
-						className="w-full h-10 border-b-2 border-primary px-4 outline-none focus:border-accent transition-all duration-500 ease-in-out"
+						className="w-full h-10 border-b-2 border-primary px-4 outline-none focus:border-accent transition-all duration-500 ease-custom"
 						required
 						minLength="6"
 					/>
