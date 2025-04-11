@@ -11,7 +11,7 @@ const SocialLinks = ({ link, icon, name }) => {
 				href={link}
 			>
 				{icon}
-				<span className="absolute opacity-0 group-hover:opacity-100 group-hover:text-primary group-hover:text-sm group-hover:-translate-y-10 duration-300 ease-custom">
+				<span className="absolute opacity-0 group-hover:opacity-100 group-hover:  group-hover:text-sm group-hover:-translate-y-10 duration-300 ease-custom">
 					{name}
 				</span>
 			</a>
@@ -77,7 +77,7 @@ function Heart() {
 						"Guided by Yūgen, Grounded in Vedana. A mindful fusion of Japanese serenity and Sanskrit self-awareness."
 					}
 				/>
-				<p className="font-inf text-primary sm:text-center text-justify ">
+				<p className="font-inf   sm:text-center text-justify ">
 					Vedayū began as a solo developer’s quest to understand
 					the quiet links between habits and emotions. Unlike
 					aggressive productivity apps, we embrace the spaces
@@ -93,12 +93,10 @@ function Heart() {
 						className="list-none flex flex-col justify-center sm:items-center text-left"
 						key={idx}
 					>
-						<li className="text-primary font-black pt-5">
+						<li className="  font-black pt-5">
 							{point.title}
 						</li>
-						<li className="text-primary">
-							{point.description}
-						</li>
+						<li className=" ">{point.description}</li>
 					</ul>
 				))}
 			</div>
@@ -121,7 +119,7 @@ function Heart() {
 				{/* Form - now full width on mobile, positioned normally */}
 				<form
 					onSubmit={handleSubmit}
-					className="flex flex-col items-center justify-center gap-5 bg-tertiary text-primary p-6 md:px-10 w-full md:w-[550px] h-auto md:h-[450px] rounded-3xl md:absolute md:left-28 md:z-10"
+					className="flex flex-col items-center justify-center gap-5 bg-tertiary   p-6 md:px-10 w-full md:w-[550px] h-auto md:h-[450px] rounded-3xl md:absolute md:left-28 md:z-10"
 				>
 					<div className="text-center">
 						<h2 className="text-xl font-bold font-inf">

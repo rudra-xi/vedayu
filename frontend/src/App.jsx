@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import { Dashboard, Heart, Insights, Landing, Profile, Login } from "./Pages";
 import { Footer, Navbar } from "./Components";
+import { AppContext } from "./Context/AppContext";
 
 function App() {
+	const { theme} = useContext(AppContext);
 	return (
 		<>
-			<div className="bg-secondary h-full w-full">
+			<div
+				className={`${
+					theme === "dark" ? "dark" : ""
+				} bg-secondary text-primary dark:bg-primary dark:text-tertiary h-full w-full`}
+			>
 				<Navbar />
 				<div className="sm:px-30 px-10 pt-24">
 					<Routes>

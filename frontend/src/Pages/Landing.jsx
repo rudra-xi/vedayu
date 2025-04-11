@@ -5,11 +5,11 @@ import { features } from "../Constants/Index";
 
 const LandingCard = ({ icon, title, description }) => {
 	return (
-		<div className="bg-accent border-3 border-primary w-65 h-70 rounded-3xl hover:-translate-y-3 duration-500 ease-custom">
+		<div className="bg-accent dark:text-primary dark:border-tertiary border-3 border-primary w-65 h-70 rounded-3xl hover:-translate-y-3 duration-500 ease-custom">
 			<span className="flex justify-center items-center h-15 w-15 mx-auto mt-5">
 				{icon}
 			</span>
-			<h2 className="text-center py-5 text-2xl text-primary font-black">
+			<h2 className="text-center py-5 text-2xl   font-black">
 				{title}
 			</h2>
 			<p className="text-center font-inf italic font-bold text-lg">
@@ -28,7 +28,7 @@ function Landing() {
 				SubTitle={"See the hidden patterns in your moods."}
 			/>
 
-			<p className="text-primary text-center text-base font-medium">
+			<p className="  text-center text-base font-medium">
 				A mindful tracker blending Japanese serenity (幽玄) and
 				Sanskrit self-awareness (वेदना).
 			</p>
@@ -41,7 +41,7 @@ function Landing() {
 				/>
 			</div>
 
-			<p className="text-primary sm:text-center text-justify text-lg font-medium px-4">
+			<p className="  sm:text-center text-justify text-lg font-medium px-4">
 				<span className="font-inf font-bold">Vedayū</span> is a
 				mood-habit tracker inspired by the Sanskrit concept of
 				self-awareness{" "}

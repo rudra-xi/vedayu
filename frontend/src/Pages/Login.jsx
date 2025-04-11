@@ -29,14 +29,14 @@ function Login() {
 	};
 
 	return (
-		<section className="pb-12">
+		<section className="pb-12 dark:text-primary">
 			<Title Title={isLogin ? "Lōgin" : "Siḡn Up"} />
 
 			<div className="flex flex-col md:flex-row items-center justify-center relative rounded-3xl drop-shadow-2xl">
 				{/* Form - now full width on mobile, positioned normally */}
 				<form
 					onSubmit={handleSubmit}
-					className="flex flex-col items-center justify-center gap-5 bg-tertiary text-primary p-6 md:px-10 w-full md:w-[550px] h-auto md:h-[450px] rounded-3xl md:absolute md:left-28 md:z-10"
+					className="flex flex-col items-center justify-center gap-5 bg-tertiary   p-6 md:px-10 w-full md:w-[550px] h-auto md:h-[450px] rounded-3xl md:absolute md:left-28 md:z-10"
 				>
 					<div className="text-center">
 						<h2 className="text-xl font-bold font-inf">
@@ -84,7 +84,7 @@ function Login() {
 						minLength="6"
 					/>
 
-					<div className="text-sm w-full text-primary/70 text-right">
+					<div className="text-sm w-full  /70 text-right">
 						<button
 							type="button"
 							onClick={() => setIsLogin(!isLogin)}

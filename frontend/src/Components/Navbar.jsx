@@ -1,24 +1,37 @@
 import React, { useContext } from "react";
-import { logoLight } from "../Assets";
+import { logoDark, logoLight } from "../Assets";
 import Button from "./Button";
 import { AppContext } from "../Context/AppContext";
 
 function Navbar() {
-	const { isLoggedIn, login, logout, navigate } = useContext(AppContext);
+	const { isLoggedIn, logout, navigate, theme } = useContext(AppContext);
 
 	return (
 		<nav>
-			<div className="flex justify-between items-center sm:px-10 px-4 py-2 bg-secondary text-primary border-b-2 fixed w-full z-50">
-				<img
-					src={logoLight}
-					alt="logo"
-					className="w-10 cursor-pointer"
-					onClick={() =>
-						isLoggedIn
-							? navigate("/dashboard")
-							: navigate("/")
-					}
-				/>
+			<div className="flex justify-between items-center sm:px-10 px-4 py-2 bg-secondary dark:bg-primary  border-b-2 fixed w-full z-50">
+				{theme === "dark" ? (
+					<img
+						src={logoDark}
+						alt="logo"
+						className="w-10 cursor-pointer"
+						onClick={() =>
+							isLoggedIn
+								? navigate("/dashboard")
+								: navigate("/")
+						}
+					/>
+				) : (
+					<img
+						src={logoLight}
+						alt="logo"
+						className="w-10 cursor-pointer"
+						onClick={() =>
+							isLoggedIn
+								? navigate("/dashboard")
+								: navigate("/")
+						}
+					/>
+				)}
 
 				{isLoggedIn ? (
 					<div>
@@ -47,7 +60,7 @@ function Navbar() {
 					<div className="flex items-center justify-center">
 						<a
 							href="/"
-							className="font-inf text-4xl font-bold text-primary text-center cursor-pointer"
+							className="font-inf text-4xl font-bold   text-center cursor-pointer"
 						>
 							Vedayū
 						</a>
