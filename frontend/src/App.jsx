@@ -7,7 +7,7 @@ import { Footer, Navbar } from "./Components";
 function App() {
 	return (
 		<>
-			<div className="bg-secondary h-screen sm:h-full">
+			<div className="bg-secondary h-full w-full">
 				<Navbar />
 				<div className="sm:px-30 px-10 pt-24">
 					<Routes>
