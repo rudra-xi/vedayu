@@ -5,7 +5,7 @@ import { features } from "../Constants/Index";
 
 const LandingCard = ({ icon, title, description }) => {
 	return (
-		<div className="bg-accent border-3 border-primary w-65 h-70 rounded-3xl hover:-translate-y-3 duration-500 ease-in-card">
+		<div className="bg-accent border-3 border-primary w-65 h-70 rounded-3xl hover:-translate-y-3 duration-500 ease-custom">
 			<span className="flex justify-center items-center h-15 w-15 mx-auto mt-5">
 				{icon}
 			</span>
@@ -57,9 +57,9 @@ function Landing() {
 			</div>
 
 			<div className=" flex sm:gap-10 gap-2 justify-center items-center flex-wrap py-10">
-				{features.map((feature, index) => (
+				{features.map((feature, idx) => (
 					<LandingCard
-						key={index}
+						key={idx}
 						icon={feature.icon}
 						title={feature.title}
 						description={feature.description}
